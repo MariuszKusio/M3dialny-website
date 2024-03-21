@@ -43,85 +43,9 @@
       rel="stylesheet"
     />
 
-    <style>
+    <link rel="stylesheet" href="style.css">
 
-        :root {
-          --mainBackgroundColor: #f8f7f1;
-          --mainTextColor: #0d0c0c;
-        }
-
-      * {
-           margin: 0;
-           padding: 0;
-       }
-
-       html {
-        font-size: 66%;
-       }
-
-       body {
-        background-color: var(--mainBackgroundColor);
-       }
-
-       .logoContainer {
-          width: 100%;
-          height: auto;
-          background-color: aqua;
-       }
-
-       .logoContainer img {
-          display: block;
-          height: 100px;
-          width: 100px;
-          margin: 0 auto;
-          padding: 20px 0px 20px 0px;
-          background-color: rebeccapurple;
-       }
-
-       .headerFlexContainer {
-         display: flex;
-         width: 100%;
-       }
-
-       .firstVideoContainer {
-          height: 500px;
-          /* width: 33.33%; */
-          background-color: bisque;
-          flex-grow: 1;
-       }
-
-       .titleContainer {
-        height: 500px;
-          /* width: 33.33%; */
-          background-color: red;
-          flex-grow: 2;
-       }
-
-       .secontVideoContainer {
-        height: 500px;
-          /* width: 33.33%; */
-          background-color: bisque;
-          flex-grow: 1;
-       }
-
-       .headerDescriptionText {
-        max-width: 60vw;
-       }
-  
-       .headerTitle,
-       .headerDescriptionText,
-       .projectsShowButton {
-          color: var(--mainTextColor);
-          text-align: center;
-       }
-
-
-
-
-
-
-    </style>
-
+    
 
     <title>M3dialny</title>
 
@@ -131,19 +55,54 @@
 
     <header>
       <div class="logoContainer">
-        <img src="" alt="">
+        <img src="img/m3dialnyLogoBasic.svg" alt="medialny website logo">
       </div>
 
       <div class="headerFlexContainer">
-         <div class="firstVideoContainer"></div>
+         <div class="firstVideoContainer"><img src="img/dworzec.png" alt=""></div>
          <div class="titleContainer">
            <h1 class="headerTitle">Witaj! <br> Jestem Medialny </h1>
-           <h2 class="headerDescriptionText">Jestem concet creatorem, tworzę matierłay promocyjne, reklamowe oraz pomagam w odświeżeniu socialmediów.</h2>
+           <h2 class="headerDescriptionText">Jestem concent creatorem, tworzę matierłay promocyjne, reklamowe oraz pomagam w odświeżeniu socialmediów.</h2>
            <button class="projectsShowButton">Zobacz realizacje</button>
          </div>
-         <div class="secontVideoContainer"></div>
+         <div class="secontVideoContainer"><img src="img/dworzec.png" alt=""></div>
       </div>
     </header>
+
+    <section class="description">
+       <div class="descriptionFlexContainer">
+          <div class="phoneImage">
+            <img src="img/phoneImage.png" alt="phone with photo made by medialny">
+          </div>
+          <div class="textDescription">
+            <p>Chcesz, żeby materiały w twoich ogłoszeniach wyglądały profesjonalnie ?
+              Pozwól, że ci pomogę. </p>
+          </div>
+       </div>
+
+       <div class="localizationText">
+         <p> Działam głównie na terenie <strong>Lublin</strong>a, ale jestem również otwarty na współpracę w innych zakątkach Polski.</p>
+       </div>
+    </section>
+
+    <section class="clientOpinions">
+      <h1>Opinie moich klientów</h1>
+      <div class="opinionsContainer"></div>
+    </section>
+
+    <section class="realizations">
+      <div class="realizationsContainer"></div>
+    </section>
+
+    <section class="contact">
+       <div class="email"></div>
+       <div class="instagram"></div>
+       <div class="phone"></div>
+    </section>
+
+    <footer>
+
+    </footer>
 
    
     <script src="main.js"></script>

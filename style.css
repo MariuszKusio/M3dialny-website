@@ -1,0 +1,167 @@
+:root {
+    --mainBackgroundColor: #f8f7f1;
+    --mainTextColor: #0d0c0c;
+  }
+
+* {
+     margin: 0;
+     padding: 0;
+ }
+
+ html {
+  font-size: 66%;
+ }
+
+ body {
+  background-color: var(--mainBackgroundColor);
+ }
+
+ button {
+  cursor: pointer;
+ }
+
+
+ /* Header section */
+
+ .logoContainer {
+    width: 100%;
+    height: auto;
+    /* background-color: aqua; */
+ }
+
+ .logoContainer img {
+    display: block;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    padding: 5px 0px 5px 0px;
+    /* background-color: rebeccapurple; */
+ }
+
+ .headerFlexContainer {
+   max-width: 1920px;
+   margin: 0 auto;
+   display: flex;
+   width: 100%;
+ }
+
+ .firstVideoContainer {
+    height: auto;
+    background-color: bisque;
+    flex-grow: 1;
+ }
+
+ .firstVideoContainer img {
+    width: 100%;
+    height: 100%;
+ }
+
+ .titleContainer {
+  height: 500px;
+    /* background-color: red; */
+    flex-grow: 1;
+ }
+
+ .headerTitle {
+    margin-top: 40px;
+    font-size: 4rem;
+ }
+
+ .headerDescriptionText {
+  width: 30vw;
+  margin: 8rem auto 4rem auto;
+  font-size: 1.7rem;
+ }
+
+ .projectsShowButton {
+   display: block;
+   padding: 10px 20px;
+   font-size: 1.4rem;
+   border: 1px solid;
+   border-radius: 50px;
+   background-color: transparent;
+   margin: 0 auto;
+
+ }
+
+ .secontVideoContainer {
+  height: auto;
+    /* width: 33.33%; */
+    background-color: bisque;
+    flex-grow: 1;
+ }
+
+ .secontVideoContainer img {
+    width: 100%;
+    height: 100%;
+ }
+
+ .headerTitle,
+ .headerDescriptionText,
+ .projectsShowButton {
+    color: var(--mainTextColor);
+    text-align: center;
+ }
+
+ /* Description section */
+
+ section.description {
+    /* height: 70svh; */
+    width: 100%;
+    max-width: 1920px;
+    margin: 6rem auto;
+ }
+
+ .descriptionFlexContainer {
+    display: flex;
+ }
+
+.description .phoneImage {
+    /* height: 100px; */
+    width: 50%;
+   flex-basis: 1;
+   /* background-color: aqua; */
+ }
+
+ .phoneImage img {
+    width: 100%;
+ }
+
+ .description .textDescription {
+    display: flex;
+    height: auto;
+    align-items: center;
+    width: 50%;
+   flex-basis: 1;
+   /* background-color: pink; */
+ }
+
+ .textDescription p {
+    display: block;
+
+    font-size: 2.8rem;
+ }
+
+ /* Dodaj tutaj animację powoli przechodzącej mapy z lewej do prawej i na odwrót */
+ .description .localizationText {
+    /* height: 100px; */
+    width: 100%;
+    margin-top: 6rem;
+    background-image: url(img/map.png);
+ }
+
+ .localizationText p {
+    display: block;
+    width: 70%;
+    padding: 6rem 0;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--mainBackgroundColor);    
+ }
+
+ /* Opinions section */
+
+ .clientOpinions h1 {
+    
+ }
