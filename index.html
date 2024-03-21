@@ -45,9 +45,22 @@
 
     <style>
 
+        :root {
+          --mainBackgroundColor: #f8f7f1;
+          --mainTextColor: #0d0c0c;
+        }
+
       * {
            margin: 0;
            padding: 0;
+       }
+
+       html {
+        font-size: 66%;
+       }
+
+       body {
+        background-color: var(--mainBackgroundColor);
        }
 
        .logoContainer {
@@ -72,21 +85,37 @@
 
        .firstVideoContainer {
           height: 500px;
-          width: 33.33%;
+          /* width: 33.33%; */
           background-color: bisque;
+          flex-grow: 1;
        }
 
-       .headerTitle {
+       .titleContainer {
         height: 500px;
-          width: 33.33%;
+          /* width: 33.33%; */
           background-color: red;
+          flex-grow: 2;
        }
 
        .secontVideoContainer {
         height: 500px;
-          width: 33.33%;
+          /* width: 33.33%; */
           background-color: bisque;
+          flex-grow: 1;
        }
+
+       .headerDescriptionText {
+        max-width: 60vw;
+       }
+  
+       .headerTitle,
+       .headerDescriptionText,
+       .projectsShowButton {
+          color: var(--mainTextColor);
+          text-align: center;
+       }
+
+
 
 
 
@@ -107,12 +136,13 @@
 
       <div class="headerFlexContainer">
          <div class="firstVideoContainer"></div>
-         <h1 class="headerTitle"></h1>
+         <div class="titleContainer">
+           <h1 class="headerTitle">Witaj! <br> Jestem Medialny </h1>
+           <h2 class="headerDescriptionText">Jestem concet creatorem, tworzę matierłay promocyjne, reklamowe oraz pomagam w odświeżeniu socialmediów.</h2>
+           <button class="projectsShowButton">Zobacz realizacje</button>
+         </div>
          <div class="secontVideoContainer"></div>
       </div>
-
-
-
     </header>
 
    
