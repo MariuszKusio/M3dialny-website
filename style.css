@@ -109,7 +109,7 @@
     /* height: 70svh; */
     width: 100%;
     max-width: 1920px;
-    margin: 6rem auto;
+    margin-top: 6rem;
  }
 
  .descriptionFlexContainer {
@@ -146,6 +146,7 @@
  .description .localizationText {
     /* height: 100px; */
     width: 100%;
+    max-width: 1920px;
     margin-top: 6rem;
     background-image: url(img/map.png);
  }
@@ -153,7 +154,7 @@
  .localizationText p {
     display: block;
     width: 70%;
-    padding: 6rem 0;
+    padding: 8rem 0;
     margin: 0 auto;
     text-align: center;
     font-size: 2rem;
@@ -161,7 +162,113 @@
  }
 
  /* Opinions section */
+ .clientOpinions {
+   width: 100%;
+ }
 
  .clientOpinions h1 {
     
+    padding: 6rem 0;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+ }
+
+ .opinionsContainer {
+   display: flex;
+   overflow: hidden;
+   gap: 20px;
+   margin-bottom: 6rem;
+ }
+
+ .opinionsContainer div {
+    width: 350px;
+    height: 250px;
+    background-color: grey;
+ }
+
+ /* Realizations section */
+
+ section.realizations {
+    max-width: 1920px;
+    margin: 0 auto;
+ }
+
+ .realizations h1 {
+   padding: 6rem 0;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+ }
+
+
+ /* Contact section */
+
+ section.contact {
+   /* width: 100%; */
+   max-width: 1920px;
+   margin: 0 auto;
+ }
+
+ .contact h1 {
+   padding: 6rem 0;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+ }
+
+ .contactFlexContainer {
+   display: flex;
+   
+   /* gap: 100px; */
+   width: auto;
+   margin: 0 auto;
+ }
+
+ .email,
+ .instagram,
+ .phone {
+   flex: 1;
+
+ }
+
+ .circleContainer {
+   width: 60px;
+   height: 60px;
+   margin: 0 auto;
+   border-radius: 50%;
+   color: var(--mainTextColor);
+   border: 2px solid; 
+ }
+
+ .circleContainer i {
+   font-size: 2.7rem;
+   line-height: 60px;
+   width: 60px;
+   text-align: center;
+ }
+
+ .contactFlexContainer a {
+   display: block;
+   padding-top: 2rem;
+   text-align: center;
+   color: var(--mainTextColor);
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: 1.5rem;
+   margin: 0 auto;
+ }
+
+ 
+
+
+
+
+
+
+ footer {
+   height: 50vh;
  }
