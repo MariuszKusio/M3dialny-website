@@ -267,7 +267,7 @@
 
  .realizationsContainer {
    position: relative;
-   left: 0;
+   left: -100px;
    top: 0;
 
    max-width: 1920px;
@@ -279,7 +279,7 @@
    -ms-overflow-style: -ms-autohiding-scrollbar;  */
 
    flex-wrap: nowrap;
-   overflow-x: auto;
+   /* overflow-x: auto; */
    
  }
 
