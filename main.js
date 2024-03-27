@@ -75,3 +75,10 @@ realizationsPositionContainer.addEventListener("mousemove", (e) => {
 
 
 
+// Opinions infinity carousel
+
+
+
+
+
+

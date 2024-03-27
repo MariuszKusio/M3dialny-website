@@ -38,7 +38,8 @@
     margin: 0 auto;
     padding: 5px 0px 5px 0px;
  }
-
+/* Zrób tak, że po załadowaniu strony pierw wyświetla się samo logo oraz wideo, które razem zajmuą 100vh, a następnie po opóźnieniu 2/3 sekundy
+do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wersji na pc z jednego wideo rozjedzie się dwa i otworzy ten napis. */
  .headerFlexContainer {
    max-width: 1920px;
    margin: 0 auto;
@@ -48,7 +49,6 @@
 
  .firstVideoContainer {
     height: auto;
-    background-color: bisque;
     flex-grow: 1;
  }
 
@@ -250,6 +250,43 @@
 
 }
 
+@media (max-width: 400px) {
+
+  .logoContainer img {
+    height: 85px;
+    width: 85px;
+  }
+ 
+  .headerTitle {
+    font-size: 3rem;
+  }
+
+  .headerDescriptionText {
+    font-size: 1.7rem;
+   }
+
+}
+
+@media (max-width: 330px) {
+
+  .logoContainer img {
+    height: 80px;
+    width: 80px;
+  }
+ 
+  .headerTitle {
+    font-size: 2.6rem;
+  }
+
+  .headerDescriptionText {
+    font-size: 1.6rem;
+   }
+
+   .projectsShowButton {
+    font-size: 1.2rem;
+  }
+
+}
 
 
 
@@ -428,6 +465,28 @@
 
 }
 
+@media (max-width: 400px) {
+
+  .description .textDescription {
+    font-size: 1.7rem;
+    }
+    
+    .localizationText p {
+      width: 80%;
+    }
+}
+
+@media (max-width: 330px) {
+
+  .description .textDescription {
+    font-size: 1.6rem;
+    }
+    
+    .localizationText p {
+      width: 85%;
+    }
+}
+
 
 
  /* Opinions section */
@@ -448,23 +507,22 @@
    display: flex;
    max-width: 1920px;
    margin: 0 auto;
-   overflow: hidden;
+   /* overflow: hidden; */
    gap: 20px;
+  
  }
 
  .opinionsContainer div {
-    width: 350px;
-    height: 250px;
+    height: 180px;
     background-color: grey;
+    border-radius: 10px;
+    flex: 0 0 300px;
  }
 
 
  
 /* Resposive opinions */
 
-/* @media (max-width: 1400px) {
- 
-} */
 
 @media (max-width: 1200px) { 
 
@@ -487,6 +545,19 @@
 @media (max-width: 650px) {
 
 }
+
+@media (max-width: 500px) {
+  .clientOpinions h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 330px) {
+  .clientOpinions h1 {
+    font-size: 2rem;
+  }
+}
+
 
 
  /* Realizations section */
@@ -614,6 +685,18 @@
 
 }
 
+@media (max-width: 500px) {
+  .realizations h1 {
+    font-size: 2.2rem; 
+ }
+}
+
+@media (max-width: 330px) {
+  .realizations h1 {
+    font-size: 2rem; 
+ }
+}
+
 
  /* Contact section */
 
@@ -730,17 +813,32 @@
     gap: 3.5rem;
   }
 
-
-
   .contactFlexContainer a {
     padding-top: 1rem;
     font-size: 1.4rem;
   }
- 
-  
- 
+
+}
 
 
+@media (max-width: 500px) {
+  .contact h1 {
+    font-size: 2.2rem;
+ }
+
+ .contactFlexContainer a {
+  font-size: 1.3rem;
+}
+}
+
+@media (max-width: 330px) {
+  .contact h1 {
+    font-size: 2rem;
+ }
+
+ .contactFlexContainer a {
+  font-size: 1.2rem;
+}
 }
 
 
@@ -765,5 +863,11 @@
  @media (max-width: 650px) {
   footer {
     margin-top: 12rem;
+  }
+ }
+
+ @media (max-width: 330px) {
+  footer {
+    margin-top: 10rem;
   }
  }
