@@ -1,4 +1,18 @@
+// Realizations section nav button
 
+const realizationNavButton = document.getElementById('projectsShowButton');
+const realizationNavButtonMobile = document.getElementById('projectsShowButtonMobile');
+
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+        section.scrollIntoView({ behavior:'smooth' })
+    }
+}
+
+realizationNavButton.addEventListener('click', function() { scrollToSection('realizations') });
+realizationNavButtonMobile.addEventListener('click', function() { scrollToSection('realizations') });
 
 
 
@@ -6,76 +20,99 @@
 
 // Realization drag and drop slider
 
-const realizationsPositionContainer = document.querySelector(".realizationsPositionContainer");
-const realizationsContainer = document.querySelector(".realizationsContainer");
-
-let pressed = false;
-let sartX;
-let x;
 
 
-// Cursor behavior change
-realizationsPositionContainer.addEventListener("mousedown", (e) => {
+
+
+
+const sliderContainer = document.querySelector('.realizationsPositionContainer');
+const slider = document.querySelector('.realizationsContainer');
+
+// let pressed = false;
+
+// slider.addEventListener('mousedown', function(e) {
+
+//     pressed = true;
+
+//     const offsetX = e.clientX - slider.getBoundingClientRect().left; 
+
+//     function handleDrag(e) {
+//         if(pressed) {
+//             const newPositionX = e.clientX - slider.getBoundingClientRect().left - offsetX;
+
+//             const minPositionX = 0;
+//             const maxPositionX = sliderContainer.clientWidth - slider.clientWidth;
+//             const boundedPositionX = Math.max(minPositionX, Math.min(newPositionX, maxPositionX));
+
+//             slider.style.left = boundedPositionX + 'px';
+//         }
+//     }
+
+//     function handleRelease() {
+//         if(pressed) {
+//             pressed = false;
+
+//             document.removeEventListener('mousemove', handleDrag);
+//             document.removeEventListener('mouseup', handleRelease);
+//         }
+//     }
+
+//     document.addEventListener('mousemove', handleDrag);
+//     document.addEventListener('mouseup', handleRelease);
+// });
+
+
+
+
+// Slider testing
+
+
+// slider.addEventListener('mousemove', function(e) {console.log(e.clientX )});
+
+// slider.addEventListener('mousedown', function(e) {console.log(e.clientX)});
+
+// slider.addEventListener('mousedown', function(e) {console.log(slider.getBoundingClientRect().left)});
+
+pressed = false
+
+
+
+slider.addEventListener('mousedown', function(e) {
+    
     pressed = true;
-    startX = e.offsetX - realizationsContainer.offsetLeft;
-    realizationsPositionContainer.style.cursor = "grabbing";
-// zmieniamy przy wciśnieciu myszką w zmiennej startX wartość w zależnosci gdzie klikneliśmy w danym kafelku, zemieniamy ikonke łapki oraz pressed na true.
-    console.log(`Pozycja kliknięcia w osi x w obrębie kafelka - ${startX}`);
-});
 
-realizationsPositionContainer.addEventListener("mouseenter", () => {
-    // znmiana łapki na puszczoną jeżeli tylko wjeżdżamy myszką na nasz kontener z kartami
-   realizationsPositionContainer.style.cursor = "grab"; 
-});
+    let pressedMousePosition = e.clientX;
+    
 
-realizationsPositionContainer.addEventListener('mouseup', () => {
-    // Jeżelu puszczamy przycisk myszki to zmieniamy łapkę na puszczoną oraz zmieniamy wartość pressed na false
-   realizationsPositionContainer.style.cursor = "grab";
-   pressed = false;
-});
-
-realizationsPositionContainer.addEventListener ("mousemove", (e) => {
-    // Jeżeli pressed = false to funkcja się nie wykna i po prostu zwróci return. Czyli tylko jeżeli jest wciśnięta i mamy ruch myszką
-  if (!pressed) return;
-  e.preventDefault();
-
-  // x pokazuje wartość na osi poziomej w miejscu ruchu myszki na którym znajduje się kafelek. 
+    console.log('klikam' );
+    
   
-  x = e.offsetX;
-  // Ponieważ funkcja wykonuje się za każdym drobnym ruchem myszki to obliczamy wartość dla LEFT klikniętej kafelki.
-  // Wartość obliczamy z:   x (wartość w którym znajduje się aktualnie poruszająca się myszka)  - startX (wartość pozycji myszki w momencie kliknięcia)
-  realizationsContainer.style.left = `${x - startX}px`;
+    slider.addEventListener('mousemove', function(e){
+       
+        if(pressed){
+         console.log('przesuwam');
+         newPositionX = e.clientX - pressedMousePosition;
+         slider.style.left = newPositionX + 'px';
+
+         document.addEventListener('mouseup', function(e){ 
+          
+            pressed = false 
+        })
+         
+        }
+    })
+
   
 
-  let leftPositionTextValue = realizationsContainer.style.left;
-//   console.log(`  ${x}`);
-//   console.log(x - startX);  
-  console.log(leftPositionTextValue);
-});
-
-const boundItems = () => {
-    let outer = realizationsPositionContainer.getBoundingClientRect();
-    let inner = realizationsContainer.getBoundingClientRect();
-
-    if(parseInt(realizationsContainer.style.left) > 0) {
-        realizationsContainer.style.left = `-${inner.width - outer.width}px`;
-        // console.log(inner.width);
-        // console.log(outer.width);
-    }
-};
-
-realizationsPositionContainer.addEventListener("mousemove", (e) => {
-    if (!pressed) return;
-    e.preventDefault();
-
-    x = e.offsetX;
-    realizationsContainer.style.left = `${x - startX}px`;
-    boundItems();
 });
 
 
 
-// Opinions infinity carousel
+
+
+
+
+
 
 
 
