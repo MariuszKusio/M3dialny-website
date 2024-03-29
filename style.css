@@ -612,13 +612,39 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
     text-transform: uppercase;
  }
 
+ /* Test slider */
+
+ /* .realizationSlider {
+  position: relative;
+  left: 10%;
+  top: 0;
+  width: 80%;
+  height: auto;
+
+  overflow: hidden;
+ }
+
+ .innerSlider {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  pointer-events: none;
+  transition: 0s ease-in;
+ } */
+
+
 
  .realizationsPositionContainer {
    position: relative;
    top: 0;
    left: 50%;
    transform: translate(-50%, 0);
-   overflow-x: auto;
+   overflow-x: hidden;
  }
 
  .realizationsContainer {
@@ -631,6 +657,9 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
    padding-bottom: 8px;
    gap: 40px;
    flex-wrap: nowrap;
+
+   pointer-events: none;
+   transition: 0s ease-in;
    /* cursor: grab; */
    /* overflow-x: auto; */
    

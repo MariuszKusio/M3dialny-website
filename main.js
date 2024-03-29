@@ -25,9 +25,6 @@ realizationNavButtonMobile.addEventListener('click', function() { scrollToSectio
 
 
 
-const sliderContainer = document.querySelector('.realizationsPositionContainer');
-const slider = document.querySelector('.realizationsContainer');
-
 // let pressed = false;
 
 // slider.addEventListener('mousedown', function(e) {
@@ -73,38 +70,101 @@ const slider = document.querySelector('.realizationsContainer');
 
 // slider.addEventListener('mousedown', function(e) {console.log(slider.getBoundingClientRect().left)});
 
-pressed = false
 
 
 
-slider.addEventListener('mousedown', function(e) {
+const sliderContainer = document.querySelector('.realizationsPositionContainer');
+const slider = document.querySelector('.realizationsContainer');
+
+// pressed = false
+
+// slider.addEventListener('mousedown', function(e) {
     
-    pressed = true;
-
-    let pressedMousePosition = e.clientX;
-    
-
-    console.log('klikam' );
+//     pressed = true;
+//     let pressedMousePosition = e.clientX;
+//     console.log('klikam' );
     
   
-    slider.addEventListener('mousemove', function(e){
+//     slider.addEventListener('mousemove', function(e){
        
-        if(pressed){
-         console.log('przesuwam');
-         newPositionX = e.clientX - pressedMousePosition;
-         slider.style.left = newPositionX + 'px';
+//         if(pressed){
+//          console.log('przesuwam');
+//          newPositionX = e.clientX - pressedMousePosition;
+//          slider.style.left = newPositionX + 'px';
 
-         document.addEventListener('mouseup', function(e){ 
+//          document.addEventListener('mouseup', function(e){ 
           
-            pressed = false 
-        })
+//             pressed = false 
+//         });
          
-        }
-    })
+//         }
+//     });
+
+
+// });
+
+let pressed = false;
+let startx;
+let x;
+
+sliderContainer.addEventListener('mousedown', (e) => {
+  pressed = true;
+  startx = e.offsetX - slider.offsetLeft;
+  sliderContainer.style.cursor = 'grabbing';
+});
+
+sliderContainer.addEventListener('mouseenter', () => {
+    sliderContainer.style.cursor = 'grab';
+  });
+
+//   sliderContainer.addEventListener('mouseleave', () => {
+//     sliderContainer.style.cursor = 'default';
+//   });
+
+  sliderContainer.addEventListener('mouseup', () => {
+    sliderContainer.style.cursor = 'grab';
+  });
+
+  window.addEventListener('mouseup', () => {
+    pressed = false;
+  });
+
+  sliderContainer.addEventListener('mousemove', (e) => {
+     if(!pressed) return;
+     e.preventDefault();
+     x = e.offsetX;
+
+     slider.style.left = `${x - startx}px`;
+    //  console.log(x - startx);
+
+    checkBoundary()
+  });
+
+
+  function checkBoundary() {
+    let outer = sliderContainer.getBoundingClientRect();
+    let inner = slider.getBoundingClientRect();
+
+    // safety about get under -30px left slider container value and more left px than slider width
+    if(parseInt(slider.style.left) > -40) {
+        slider.style.left = '40px'
+    } else if((parseInt(slider.style.left) + sliderContainer.offsetWidth) < 680) {
+        slider.style.left = `680px`
+    }
+
+    // console.log(parseInt(slider.style.left))
+    // console.log(sliderContainer.offsetWidth)
+
+    console.log((parseInt(slider.style.left) + sliderContainer.offsetWidth))
+  }
 
   
 
-});
+
+
+
+
+
 
 
 
