@@ -612,32 +612,6 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
     text-transform: uppercase;
  }
 
- /* Test slider */
-
- /* .realizationSlider {
-  position: relative;
-  left: 10%;
-  top: 0;
-  width: 80%;
-  height: auto;
-
-  overflow: hidden;
- }
-
- .innerSlider {
-  position: relative;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 200%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
-  pointer-events: none;
-  transition: 0s ease-in;
- } */
-
-
 
  .realizationsPositionContainer {
    position: relative;
@@ -708,6 +682,8 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
    position: absolute;
    bottom: 10%;
    left: 50%;
+   z-index: 3;
+   pointer-events: all;
    transform: translateX(-50%);
    display: block;
    padding: 10px 25px;
@@ -905,6 +881,63 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
  .contactFlexContainer a {
   font-size: 1.2rem;
 }
+}
+
+
+/* Gallery section */
+
+.realizationsGallery {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url(img/blurLayer.png);
+  backdrop-filter: blur(8px);
+  height: 100svh;
+  width: 100%;
+  /* Wyłącz możliwosci scrollowania strony z blurem */
+}
+
+.closeButton {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.9;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.closeButton:before, .closeButton:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: var(--mainBackgroundColor);
+}
+.closeButton:before {
+  transform: rotate(45deg);
+}
+.closeButton:after {
+  transform: rotate(-45deg);
+}
+
+.closeButton:hover {
+  opacity: 1;
+  transform: rotate(-180deg);
+}
+
+.galleryTitle {
+  position: absolute;
+  left: 50%;
+  top: 60px;
+  transform: translateX(-50%);
+  color: var(--mainBackgroundColor);
+  font-size: 3.8rem;
+  font-family: var(--titleFont);
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 

@@ -18,116 +18,45 @@ realizationNavButtonMobile.addEventListener('click', function() { scrollToSectio
 
 
 
-// Realization drag and drop slider
-
-
-
-
-
-
-// let pressed = false;
-
-// slider.addEventListener('mousedown', function(e) {
-
-//     pressed = true;
-
-//     const offsetX = e.clientX - slider.getBoundingClientRect().left; 
-
-//     function handleDrag(e) {
-//         if(pressed) {
-//             const newPositionX = e.clientX - slider.getBoundingClientRect().left - offsetX;
-
-//             const minPositionX = 0;
-//             const maxPositionX = sliderContainer.clientWidth - slider.clientWidth;
-//             const boundedPositionX = Math.max(minPositionX, Math.min(newPositionX, maxPositionX));
-
-//             slider.style.left = boundedPositionX + 'px';
-//         }
-//     }
-
-//     function handleRelease() {
-//         if(pressed) {
-//             pressed = false;
-
-//             document.removeEventListener('mousemove', handleDrag);
-//             document.removeEventListener('mouseup', handleRelease);
-//         }
-//     }
-
-//     document.addEventListener('mousemove', handleDrag);
-//     document.addEventListener('mouseup', handleRelease);
-// });
-
-
-
-
-// Slider testing
-
-
-// slider.addEventListener('mousemove', function(e) {console.log(e.clientX )});
-
-// slider.addEventListener('mousedown', function(e) {console.log(e.clientX)});
-
-// slider.addEventListener('mousedown', function(e) {console.log(slider.getBoundingClientRect().left)});
-
-
-
-
 const sliderContainer = document.querySelector('.realizationsPositionContainer');
 const slider = document.querySelector('.realizationsContainer');
+const slide = document.querySelectorAll('.realizationCard');
+const realizationButton = document.querySelectorAll('.realizationShowButton');
 
-// pressed = false
-
-// slider.addEventListener('mousedown', function(e) {
-    
-//     pressed = true;
-//     let pressedMousePosition = e.clientX;
-//     console.log('klikam' );
-    
-  
-//     slider.addEventListener('mousemove', function(e){
-       
-//         if(pressed){
-//          console.log('przesuwam');
-//          newPositionX = e.clientX - pressedMousePosition;
-//          slider.style.left = newPositionX + 'px';
-
-//          document.addEventListener('mouseup', function(e){ 
-          
-//             pressed = false 
-//         });
-         
-//         }
-//     });
-
-
-// });
 
 let pressed = false;
 let startx;
 let x;
 
+let totalCardsSliderWidth = (slide[0].offsetWidth + 40)  * slide.length;
+
 sliderContainer.addEventListener('mousedown', (e) => {
   pressed = true;
   startx = e.offsetX - slider.offsetLeft;
-  sliderContainer.style.cursor = 'grabbing';
+  // sliderContainer.style.cursor = 'grabbing';
+  sliderContainer.style.cursor = 'url("img/cursor1.svg"), auto';
 });
 
 sliderContainer.addEventListener('mouseenter', () => {
-    sliderContainer.style.cursor = 'grab';
+ 
+    sliderContainer.style.cursor = 'url("img/cursor1.svg"), auto';
+  
   });
 
-//   sliderContainer.addEventListener('mouseleave', () => {
-//     sliderContainer.style.cursor = 'default';
-//   });
-
   sliderContainer.addEventListener('mouseup', () => {
-    sliderContainer.style.cursor = 'grab';
+    // sliderContainer.style.cursor = 'grab';
+    sliderContainer.style.cursor = 'url("img/cursor1.svg"), auto';
   });
 
   window.addEventListener('mouseup', () => {
     pressed = false;
   });
+
+  // Zrób tak żeby przycisk zobacz więcej na realizacjach po kliknięciu nie przesuwał slidera bo robi błędy
+  realizationButton.forEach(item => item.addEventListener('click', () => {
+    console.log('klikam przycisk');
+    pressed = false ;
+  }));
 
   sliderContainer.addEventListener('mousemove', (e) => {
      if(!pressed) return;
@@ -144,18 +73,19 @@ sliderContainer.addEventListener('mouseenter', () => {
   function checkBoundary() {
     let outer = sliderContainer.getBoundingClientRect();
     let inner = slider.getBoundingClientRect();
+ 
+    slider.style.left = `-${sliderContainer.offsetWidth - totalCardsSliderWidth}px`;
+
 
     // safety about get under -30px left slider container value and more left px than slider width
-    if(parseInt(slider.style.left) > -40) {
+    if(parseInt(slider.style.left) > 40) {
         slider.style.left = '40px'
-    } else if((parseInt(slider.style.left) + sliderContainer.offsetWidth) < 680) {
-        slider.style.left = `680px`
+    } else if(parseInt(slider.style.left) < sliderContainer.offsetWidth - totalCardsSliderWidth) {
+        slider.style.left = `${sliderContainer.offsetWidth - totalCardsSliderWidth}px`;
     }
 
+    // console.log(`${parseInt(slider.style.left)} > ${sliderContainer.offsetWidth - totalCardsSliderWidth}` )
     // console.log(parseInt(slider.style.left))
-    // console.log(sliderContainer.offsetWidth)
-
-    console.log((parseInt(slider.style.left) + sliderContainer.offsetWidth))
   }
 
   
