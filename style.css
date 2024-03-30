@@ -5,6 +5,7 @@
     --textFont: "Roboto";
   }
 
+
 * {
      margin: 0;
      padding: 0;
@@ -12,8 +13,12 @@
 
  html {
   font-size: 66%;
-  scroll-behavior: smooth;
  }
+
+ html::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
 
  body {
   background-color: var(--mainBackgroundColor);
@@ -48,8 +53,17 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
  }
 
  .firstVideoContainer {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     height: auto;
     flex-grow: 1;
+    transition: .7s;
+ }
+
+ .firstVideoContainer.firstMove {
+  left: 0;
+  transform: translateX(0);
  }
 
  .firstVideoContainer img {
@@ -87,7 +101,7 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
    border-radius: 50px;
    background-color: transparent;
    margin: 0 auto;
-   transition: .4s;
+   transition: .7s;
  }
 
  .projectsShowButton:hover {
@@ -96,9 +110,18 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
  }
 
  .secontVideoContainer {
+    position: relative;
+    right: 50%;
+    transform: translateX(50%);
     height: auto;
-    background-color: bisque;
     flex-grow: 1;
+    transition: .7s;
+ }
+
+ .secontVideoContainer.secondMove {
+  right: 0;
+  transform: translateX(0);
+ 
  }
 
  .secontVideoContainer img {
@@ -183,9 +206,19 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
 
 @media (max-width: 650px) {
 
+  .firstVideoContainer.firstMove {
+    left: 50%;
+    transform: translateX(-50%);
+   }
+
+  .secontVideoContainer.secondMove {
+    right: 50%;
+    transform: translateX(50%);
+   }
+
   .firstVideoContainer img {
     width: 100%;
-    height: 100svh;
+    height: calc(100svh - 110px);
  }
 
   .logoContainer img {
@@ -195,8 +228,13 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
 
   
   .headerTitle {
-    margin: 1rem 0 4rem 0;
+    margin: 1rem 0 -10rem 0;
     font-size: 4rem;
+    transition: .7s;
+  }
+
+  .headerTitle.moveTitle {
+    margin: 1rem 0 4rem 0;
   }
 
   .titleContainer {
@@ -623,7 +661,7 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
 
  .realizationsContainer {
    position: relative;
-   left: 0px;
+   left: 40px;
    top: 0;
    max-width: 1920px;
    margin: 0 auto;
@@ -887,6 +925,7 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
 /* Gallery section */
 
 .realizationsGallery {
+  display: none; 
   position: fixed;
   top: 0;
   left: 0;
@@ -895,6 +934,7 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
   height: 100svh;
   width: 100%;
   /* Wyłącz możliwosci scrollowania strony z blurem */
+  
 }
 
 .closeButton {
@@ -938,8 +978,75 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
   font-family: var(--titleFont);
   text-transform: uppercase;
   font-weight: 400;
+
 }
 
+.galleryWrapper {
+  width: 90%;
+  max-height: 80svh;
+  max-width: 1920px;
+  margin: 0 auto;
+  margin-top: calc(60px + 3.8rem + 40px);
+  
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0 , 1fr));
+  grid-gap: 25px;
+  /* overflow: scroll; */
+  overflow-y: scroll;
+  
+}
+
+.galleryWrapper::-webkit-scrollbar { 
+  width: 7px;
+} 
+
+.galleryWrapper::-webkit-scrollbar-track { 
+  background: var(--mainBackgroundColor); 
+} 
+
+.galleryWrapper::-webkit-scrollbar-thumb { 
+  background: var(--mainTextColor);   
+}
+
+.galleryWrapper::-webkit-scrollbar-thumb:hover { 
+  background: #2e2b2bf1;
+} 
+
+
+
+ /* Dla wersji smarthphonoej ukrycie scrollbara
+.galleryWrapper::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+} */
+
+.videoItem {
+  position: relative;
+}
+
+.galleryWrapper video {
+  display: block;
+  position: relative;
+  width: 100%;
+  /* height: 200px; */
+  cursor: pointer;
+
+
+}
+
+.galleryWrapper i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.5rem;
+  color: white;
+  transition: .3s;
+}
+
+.galleryWrapper .videoItem:hover i {
+  opacity: .6;
+}
 
 
 
