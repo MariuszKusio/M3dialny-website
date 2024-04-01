@@ -3,6 +3,7 @@
     --mainTextColor: #0d0c0c;
     --titleFont: "Cormorant Unicase";
     --textFont: "Roboto";
+    --galleryMarginTop: calc(60px + 3.8rem + 40px);
   }
 
 
@@ -43,8 +44,7 @@
     margin: 0 auto;
     padding: 5px 0px 5px 0px;
  }
-/* Zrób tak, że po załadowaniu strony pierw wyświetla się samo logo oraz wideo, które razem zajmuą 100vh, a następnie po opóźnieniu 2/3 sekundy
-do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wersji na pc z jednego wideo rozjedzie się dwa i otworzy ten napis. */
+
  .headerFlexContainer {
    max-width: 1920px;
    margin: 0 auto;
@@ -686,6 +686,7 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
    flex:  0 0 auto;
    width: 470px;
    height: 740px;
+   margin-right: 0px;
    border-radius: 15px;
    overflow: hidden;
    box-shadow: 7px 7px 8px -9px rgba(66, 68, 90, 1);
@@ -714,6 +715,7 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
    transform: translateX(-50%);
    color: var(--mainBackgroundColor);
    font-size: 3rem;
+   font-weight: 500;
  }
 
  .realizationShowButton {
@@ -730,6 +732,8 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
    color: var(--mainBackgroundColor);
    background-color: transparent;
    transition: .4s;
+   font-size: 1.4rem;
+   text-transform: uppercase;
  }
 
  .realizationShowButton:hover {
@@ -759,15 +763,55 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
     font-size: 2.5rem; 
     padding: 5rem 0;
  }
+
+ .realizationCard {
+  width: 400px;
+  height: 650px;
+ }
 }
 
 @media (max-width: 650px) {
+/* Mobile */
+
+.realizationsPositionContainer {
+  overflow-x: scroll;
+}
+
+.realizationCard:last-child {
+
+  margin-right: 40px;
+  /* padding-right: 40px; */
+  
+}
+
+.realizationCard {
+  width: 380px;
+  height: 620px;
+ }
+
+ .cardTitle {
+  font-size: 2.7rem;
+}
+.realizationShowButton {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/* .realizationLastGapMobile {
+  width: 40px;
+  height: 100%;
+} */
 
 }
 
 @media (max-width: 500px) {
   .realizations h1 {
     font-size: 2.2rem; 
+ }
+
+ .realizationCard {
+  width: 340px;
+  height: 580px;
  }
 }
 
@@ -983,10 +1027,10 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
 
 .galleryWrapper {
   width: 90%;
-  max-height: 80svh;
   max-width: 1920px;
   margin: 0 auto;
-  margin-top: calc(60px + 3.8rem + 40px);
+  max-height: calc(95svh - var(--galleryMarginTop));
+  margin-top: var(--galleryMarginTop);
   
   display: grid;
   grid-template-columns: repeat(4, minmax(0 , 1fr));
@@ -1014,11 +1058,6 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
 
 
 
- /* Dla wersji smarthphonoej ukrycie scrollbara
-.galleryWrapper::-webkit-scrollbar {
-  display: none;
-  scroll-behavior: smooth;
-} */
 
 .videoItem {
   position: relative;
@@ -1048,6 +1087,53 @@ do góry wjeżdża napis "witaj, jestem medialny". To w wersji moblinej, a w wer
   opacity: .6;
 }
 
+/* Resposive gallery */
+
+
+@media (max-width: 1200px) { 
+
+
+}
+
+@media (max-width: 1000px) {
+  .galleryWrapper {
+    width: 95%;
+    max-height: calc(95svh - var(--galleryMarginTop));
+    margin-top: var(--galleryMarginTop);
+    grid-template-columns: repeat(3, minmax(0 , 1fr));
+    grid-gap: 15px;
+  }
+
+}
+
+@media (max-width: 650px) {
+  .galleryWrapper {
+    width: 96%;
+    max-height: 80svh;
+    
+    margin-top: calc(60px + 3.8rem + 40px);
+    
+    
+    grid-template-columns: repeat(2, minmax(0 , 1fr));
+    grid-gap: 10px;
+  }
+
+  .galleryWrapper::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
+
+
+}
+
+
+@media (max-width: 500px) {
+
+}
+
+@media (max-width: 350px) {
+
+}
 
 
 

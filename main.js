@@ -24,6 +24,8 @@ const slide = document.querySelectorAll('.realizationCard');
 const realizationButton = document.querySelectorAll('.realizationShowButton');
 
 
+
+
 let pressed = false;
 let startx;
 let x;
@@ -53,10 +55,10 @@ sliderContainer.addEventListener('mouseenter', () => {
   });
 
   // Zrób tak żeby przycisk zobacz więcej na realizacjach po kliknięciu nie przesuwał slidera bo robi błędy
-  // realizationButton.forEach(item => item.addEventListener('click', () => {
-  //   console.log('klikam przycisk');
-  //   pressed = false ;
-  // }));
+  realizationButton.forEach(item => item.addEventListener('click', () => {
+    console.log('klikam przycisk');
+    pressed = false ;
+  }));
 
   sliderContainer.addEventListener('mousemove', (e) => {
      if(!pressed) return;
@@ -67,16 +69,16 @@ sliderContainer.addEventListener('mouseenter', () => {
    
 
     checkBoundary()
-
+    // console.log(x - startx);
   });
 
 
   function checkBoundary() {
 
-    // safety about get under -30px left slider container value and more left px than slider width
+    // safety about get under 40px left slider container value and more left px than slider width
     if(parseInt(slider.style.left) > 40) {
         slider.style.left = '40px'
-    } else if(parseInt(slider.style.left) < sliderContainer.offsetWidth - totalCardsSliderWidth) {
+    } else if(parseInt(slider.style.left) < (sliderContainer.offsetWidth - totalCardsSliderWidth )) {
         slider.style.left = `${sliderContainer.offsetWidth - totalCardsSliderWidth}px`;
     }
 
@@ -114,6 +116,7 @@ const firstVideo = document.querySelector(".firstVideoContainer");
 const secondVideo = document.querySelector(".secontVideoContainer");
 // Pobierz video ze strony głównej żeby potem po jego załadowaniu odpalić animacje. Pobierzemy tutaj video, które jest pod spodem żęby na pewno pobrało się
 // razem z tym drugim video, które też dotyczy tej animacji
+
 const firstVideoLoadClass = document.querySelector(".firstVideo");
 const headerTitle = document.querySelector(".headerTitle");
 
