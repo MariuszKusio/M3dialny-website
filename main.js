@@ -17,13 +17,11 @@ realizationNavButtonMobile.addEventListener('click', function() { scrollToSectio
 
 
 
-
+// Realizations slider 
 const sliderContainer = document.querySelector('.realizationsPositionContainer');
 const slider = document.querySelector('.realizationsContainer');
 const slide = document.querySelectorAll('.realizationCard');
 const realizationButton = document.querySelectorAll('.realizationShowButton');
-
-
 
 
 let pressed = false;
@@ -35,7 +33,7 @@ let totalCardsSliderWidth = (slide[0].offsetWidth + 40)  * slide.length;
 sliderContainer.addEventListener('mousedown', (e) => {
   pressed = true;
   startx = e.offsetX - slider.offsetLeft;
-  // sliderContainer.style.cursor = 'grabbing';
+  // custom cursor
   sliderContainer.style.cursor = 'url("img/cursor1opacity.svg"), auto';
 });
 
@@ -46,7 +44,6 @@ sliderContainer.addEventListener('mouseenter', () => {
   });
 
   sliderContainer.addEventListener('mouseup', () => {
-    // sliderContainer.style.cursor = 'grab';
     sliderContainer.style.cursor = 'url("img/cursor1.svg"), auto';
   });
 
@@ -66,10 +63,8 @@ sliderContainer.addEventListener('mouseenter', () => {
      x = e.offsetX;
 
      slider.style.left = `${x - startx}px`;
-   
 
     checkBoundary()
-    // console.log(x - startx);
   });
 
 
@@ -94,7 +89,7 @@ sliderContainer.addEventListener('mouseenter', () => {
   // Close gallery
   closeButton.addEventListener('click', () => {
    realizationGallery.style.display = 'none';
-   document.body.style.overflow = '';
+   document.body.classList.remove('disabledScroll');
   });
 
   // Show gallery
@@ -102,25 +97,20 @@ sliderContainer.addEventListener('mouseenter', () => {
   realizationButton.forEach( button => {
     button.addEventListener('click', (e) => {
       realizationGallery.style.display = 'block';
-      document.body.style.overflow = 'hidden';
-      console.log(e.target.id);
+      document.body.classList.add('disabledScroll');
+      // console.log(e.target.id);
     })
   });
-
-  
-// Delayed animations
 
 // header animation
 
 const firstVideo = document.querySelector(".firstVideoContainer");
 const secondVideo = document.querySelector(".secontVideoContainer");
-// Pobierz video ze strony głównej żeby potem po jego załadowaniu odpalić animacje. Pobierzemy tutaj video, które jest pod spodem żęby na pewno pobrało się
-// razem z tym drugim video, które też dotyczy tej animacji
-
-const firstVideoLoadClass = document.querySelector(".firstVideo");
+const firstVideoLoad = document.querySelector(".firstVideo");
+const secondVideoLoad = document.querySelector(".secondVideo");
 const headerTitle = document.querySelector(".headerTitle");
 
-firstVideoLoadClass.addEventListener('load', function() {
+firstVideoLoad.addEventListener('load', function() {
 
   setTimeout(() => {
     firstVideo.classList.add('firstMove');
@@ -139,11 +129,36 @@ window.addEventListener('scroll', function() {
   firstVideo.classList.add('firstMove');
   secondVideo.classList.add('secondMove');
 
-
   //Mobile animation
   headerTitle.classList.add('moveTitle');
   }
 });
+
+// longer video with the same file size
+firstVideoLoad.playbackRate = 0.8;
+secondVideoLoad.playbackRate = 0.8;
+
+
+const loader = document.querySelector('.loader');
+const loaderLogo = document.querySelector('.loadAnimation img');
+const vanishBlock = document.querySelector('.vanishBlock');
+
+// loading page listener with vanish function
+window.addEventListener('load', () => {
+  vanishBlock.style.display = 'none';
+  loader.classList.add('fadeOut');
+  window.scrollY === 0 ? loaderLogo.classList.add('fadeOut') : loaderLogo.style.top = '-200px';
+  
+
+  setTimeout( () => {
+    loader.style.display = "none";
+    document.body.classList.remove('disabledScroll');
+  }, 1000);
+
+});
+
+
+
 
 
 

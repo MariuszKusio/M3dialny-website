@@ -44,7 +44,14 @@
 
    
   </head>
-  <body>
+  <body class="disabledScroll">
+
+    <div class="loader">
+      <div class="loadAnimation">
+         <img src="img/m3dialnyLogoBasic.svg" alt="">
+         <div class="vanishBlock"></div>
+      </div>
+    </div>
 
     <header>
       <div class="logoContainer">
@@ -59,8 +66,10 @@
           <button class="projectsShowButton" id="projectsShowButtonMobile">Zobacz realizacje</button>
          </div>
          <div class="firstVideoContainer">
-           <img src="img/dworzec.png" alt="" class="firstVideo"></div>
-           <!-- <video src="img/videotest.mp4" autoplay loop class="firstVideo"></video> -->
+           <video loop autoplay muted playsinline preload="metadata" class="firstVideo">
+             <source src="img/firstMainVideo.webm" type="video/webm" />
+           </video>
+         </div>
          <div class="titleContainer">
            <h1 class="headerTitle">Witaj! <br> Jestem Medialny </h1>
            <h2 class="headerDescriptionText">Jestem concent creatorem, tworzę matierłay promocyjne, reklamowe 
@@ -68,8 +77,11 @@
            </h2>
            <button class="projectsShowButton" id="projectsShowButton">Zobacz realizacje</button>
          </div>
-         <div class="secontVideoContainer"><img src="img/dworzec.png" alt=""></div>
-      </div>
+         <div class="secontVideoContainer">
+          <video loop autoplay muted playsinline preload="metadata" class="secondVideo">
+            <source src="img/secondMainVideo.webm" type="video/webm" />
+          </video>
+         </div>
     </header>
 
     <section class="description">
@@ -157,10 +169,6 @@
           <img src="img/barber.png" alt="">
         </div>
 
-        <!-- <div class="realizationLastGapMobile">
-
-        </div> -->
-
        </div>
       </div>
 
@@ -168,60 +176,59 @@
       <div class="realizationsGallery">
         <div class="closeButton"></div>
         <h2 class="galleryTitle">Galeria</h2>
-        <!-- Zrób galerię dla video, gdzie będzie scrollowalny kontener -->
         <div class="galleryWrapper">
-          <a href="img/videotest.mp4" data-dimbox="medialny-Gallery" data-dimbox-caption="Realizacja dla Barbera" class="videoItem">
-            <video src="img/videotest.mp4" autoplay loop preload="metadata"></video>
+          <a href="img/firstMainVideo.webm" data-dimbox="medialny-Gallery" data-dimbox-caption="Realizacja dla Barbera" class="videoItem">
+            <video src="img/firstMainVideo.webm" preload="metadata"></video>
             <i class="fa-solid fa-play"></i>
           </a>
 
-          <a href="img/videotest.mp4" data-dimbox="medialny-Galleryyy" data-dimbox-caption="Realizacja dla Bddd" class="videoItem">
-            <video src="img/videotest.mp4" autoplay loop preload="metadata"></video>
+          <a href="img/secondMainVideo.webm" data-dimbox="medialny-Gallery" data-dimbox-caption="Realizacja dla Bddd" class="videoItem">
+            <video src="img/secondMainVideo.webm" preload="metadata"></video>
             <i class="fa-solid fa-play"></i>
           </a>
 
-          <a href="img/videotest.mp4" data-dimbox="medialny-Galleryyy" class="videoItem">
-            <video src="img/videotest.mp4" autoplay loop preload="metadata"></video>
+          <a href="img/firstMainVideo.webm" data-dimbox="medialny-Gallery" class="videoItem">
+            <video src="img/firstMainVideo.webm" preload="metadata"></video>
             <i class="fa-solid fa-play"></i>
           </a>
 
-          <a href="img/videotest.mp4" data-dimbox="medialny-Gallery" class="videoItem">
-            <video src="img/videotest.mp4" autoplay loop preload="metadata"></video>
+          <a href="img/secondMainVideo.webm" data-dimbox="medialny-Gallery" class="videoItem">
+            <video src="img/secondMainVideo.webm" preload="metadata"></video>
             <i class="fa-solid fa-play"></i>
           </a>
 
-          <a href="img/videotest.mp4" data-dimbox="medialny-Gallery" class="videoItem">
-            <video src="img/videotest.mp4" autoplay loop preload="metadata"></video>
+          <a href="img/firstMainVideo.webm" data-dimbox="medialny-Gallery" class="videoItem">
+            <video src="img/videotest.mp4" preload="metadata"></video>
             <i class="fa-solid fa-play"></i>
           </a>
 
-          <a href="img/videotest.mp4" data-dimbox="medialny-Gallery" class="videoItem">
-            <video src="img/videotest.mp4" autoplay loop preload="metadata"></video>
+          <a href="img/secondMainVideo.webm" data-dimbox="medialny-Gallery" class="videoItem">
+            <video src="img/secondMainVideo.webm" preload="metadata"></video>
             <i class="fa-solid fa-play"></i>
           </a>
 
-          <a href="img/videotest.mp4" data-dimbox="medialny-Gallery" class="videoItem">
-            <video src="img/videotest.mp4" autoplay loop preload="metadata"></video>
+          <a href="img/firstMainVideo.webm" data-dimbox="medialny-Gallery" class="videoItem">
+            <video src="img/firstMainVideo.webm" preload="metadata"></video>
             <i class="fa-solid fa-play"></i>
           </a>
 
-          <a href="img/videotest.mp4" data-dimbox="medialny-Gallery" class="videoItem">
-            <video src="img/videotest.mp4" autoplay loop preload="metadata"></video>
+          <a href="img/secondMainVideo.webm" data-dimbox="medialny-Gallery" class="videoItem">
+            <video src="img/secondMainVideo.webm" preload="metadata"></video>
             <i class="fa-solid fa-play"></i>
           </a>
 
-          <a href="img/videotest.mp4" data-dimbox="medialny-Gallery" class="videoItem">
-            <video src="img/videotest.mp4" autoplay loop preload="metadata"></video>
+          <a href="img/firstMainVideo.webm" data-dimbox="medialny-Gallery" class="videoItem">
+            <video src="img/firstMainVideo.webm" preload="metadata"></video>
             <i class="fa-solid fa-play"></i>
           </a>
 
-          <a href="img/videotest.mp4" data-dimbox="medialny-Gallery" class="videoItem">
-            <video src="img/videotest.mp4" autoplay loop preload="metadata"></video>
+          <a href="img/secondMainVideo.webm" data-dimbox="medialny-Gallery" class="videoItem">
+            <video src="img/secondMainVideo.webm" preload="metadata"></video>
             <i class="fa-solid fa-play"></i>
           </a>
 
-          <a href="img/videotest.mp4" data-dimbox="medialny-Gallery" class="videoItem">
-            <video src="img/videotest.mp4" autoplay loop preload="metadata"></video>
+          <a href="img/firstMainVideo.webm" data-dimbox="medialny-Gallery" class="videoItem">
+            <video src="img/firstMainVideo.webm" preload="metadata"></video>
             <i class="fa-solid fa-play"></i>
           </a>
        
