@@ -805,10 +805,10 @@ section.realizations {
 
 /* Contact section */
 
- section.contact {
+section.contact {
   max-width: 1920px;
   margin: 0 auto;
- }
+}
 
 .contact h1 {
   padding: 6rem 0;
@@ -830,119 +830,106 @@ section.realizations {
 .phone {
   flex: 1;
 }
-
  
- .circleContainer:hover{
-   color: var(--mainBackgroundColor);
-   background-color: var(--mainTextColor);
- 
- } 
+.circleContainer:hover{
+  color: var(--mainBackgroundColor);
+  background-color: var(--mainTextColor); 
+} 
 
- .circleContainer {
-   width: 60px;
-   height: 60px;
-   margin: 0 auto;
-   border-radius: 50%;
-   color: var(--mainTextColor);
-   border: 2px solid var(--mainTextColor); 
-   cursor: pointer;
-   transition: .3s;
- }
-
- .circleContainer i {
-   font-size: 2.7rem;
-   line-height: 60px;
-   width: 60px;
-   text-align: center;
- }
-
- .contactFlexContainer a {
-   display: block;
-   padding-top: 2rem;
-   text-align: center;
-   color: var(--mainTextColor);
-   text-decoration: none;
-   text-transform: uppercase;
-   font-family: var(--textFont);
-   font-weight: 400;
-   font-size: 1.5rem;
-   margin: 0 auto;
- }
-
- 
-/* Resposive contact */
-
-
-@media (max-width: 1200px) { 
-
-
+.circleContainer {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+  color: var(--mainTextColor);
+  border: 2px solid var(--mainTextColor); 
+  cursor: pointer;
+  transition: .3s;
 }
 
-@media (max-width: 1000px) {
-  .contact h1 {
-    font-size: 2.8rem;
- }
+.circleContainer i {
+  width: 60px;
+  line-height: 60px;
+  font-size: 2.7rem;
+  text-align: center;
+}
 
- .circleContainer {
+.contactFlexContainer a {
+  display: block;
+  margin: 0 auto;
+  padding-top: 2rem;
+  text-align: center;
+  color: var(--mainTextColor);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--textFont);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+/* Resposive contact */
+
+@media (max-width: 1000px) {
+.contact h1 {
+  font-size: 2.8rem;
+}
+
+.circleContainer {
   width: 50px;
   height: 50px;
 }
 
 .circleContainer i {
-  font-size: 2.4rem;
-  line-height: 50px;
   width: 50px;
+  line-height: 50px;
+  font-size: 2.4rem;
 }
 
 .contactFlexContainer a {
   font-family: var(--textFont);
   font-size: 1.3rem;
 }
-
 }
 
 @media (max-width: 750px) {
-  .contact h1 {
-    font-size: 2.5rem;
-    padding: 5rem 0;
- }
-
+.contact h1 {
+  padding: 5rem 0;
+  font-size: 2.5rem;
+}
 }
 
 @media (max-width: 650px) {
-  .contactFlexContainer {
-    flex-direction: column;
-    gap: 3.5rem;
-  }
+.contactFlexContainer {
+  flex-direction: column;
+  gap: 3.5rem;
+}
 
-  .contactFlexContainer a {
-    padding-top: 1rem;
-    font-size: 1.4rem;
-  }
-
+.contactFlexContainer a {
+  padding-top: 1rem;
+  font-size: 1.4rem;
+}
 }
 
 
 @media (max-width: 500px) {
-  .contact h1 {
-    font-size: 2.2rem;
- }
+.contact h1 {
+  font-size: 2.2rem;
+}
 
- .contactFlexContainer a {
+.contactFlexContainer a {
   font-size: 1.3rem;
 }
 }
 
 @media (max-width: 330px) {
-  .contact h1 {
-    font-size: 2rem;
- }
+.contact h1 {
+  font-size: 2rem;
+}
 
- .contactFlexContainer a {
+.contactFlexContainer a {
   font-size: 1.2rem;
 }
 }
-
 
 /* Gallery section */
 
@@ -951,10 +938,10 @@ section.realizations {
   position: fixed;
   top: 0;
   left: 0;
-  background-image: url(img/blurLayer.png);
-  backdrop-filter: blur(8px);
   height: 100svh;
   width: 100%; 
+  background-image: url(img/blurLayer.png);
+  backdrop-filter: blur(8px);
 }
 
 .closeButton {
@@ -998,16 +985,15 @@ section.realizations {
   font-family: var(--titleFont);
   text-transform: uppercase;
   font-weight: 400;
-
 }
 
 .galleryWrapper {
+  display: grid;
   width: 90%;
   max-width: 1920px;
-  margin: 0 auto;
   max-height: calc(95svh - var(--galleryMarginTop));
+  margin: 0 auto;
   margin-top: var(--galleryMarginTop);
-  display: grid;
   grid-template-columns: repeat(4, minmax(0 , 1fr));
   grid-gap: 25px;
   overflow-y: scroll;
@@ -1034,9 +1020,6 @@ section.realizations {
   cursor: pointer;
 } 
 
-
-
-
 .videoItem {
   position: relative;
 }
@@ -1045,7 +1028,6 @@ section.realizations {
   display: block;
   position: relative;
   width: 100%;
-  /* height: 200px; */
   cursor: pointer;
 }
 
@@ -1065,134 +1047,102 @@ section.realizations {
 
 /* Resposive gallery */
 
-
-@media (max-width: 1200px) { 
-
-
-}
-
 @media (max-width: 1000px) {
-  .galleryWrapper {
-    width: 95%;
-    max-height: calc(95svh - var(--galleryMarginTop));
-    margin-top: var(--galleryMarginTop);
-    grid-template-columns: repeat(3, minmax(0 , 1fr));
-    grid-gap: 15px;
-  }
-
+.galleryWrapper {
+  width: 95%;
+  max-height: calc(95svh - var(--galleryMarginTop));
+  margin-top: var(--galleryMarginTop);
+  grid-template-columns: repeat(3, minmax(0 , 1fr));
+  grid-gap: 15px;
+}
 }
 
 @media (max-width: 650px) {
-  .galleryWrapper {
-    width: 96%;
-    max-height: 80svh;
-    
-    margin-top: calc(60px + 3.8rem + 40px);
-    
-    
-    grid-template-columns: repeat(2, minmax(0 , 1fr));
-    grid-gap: 10px;
-  }
+.galleryWrapper {
+  width: 96%;
+  max-height: 80svh;  
+  margin-top: calc(60px + 3.8rem + 40px);
+  grid-template-columns: repeat(2, minmax(0 , 1fr));
+  grid-gap: 10px;
+}
 
-  .galleryWrapper::-webkit-scrollbar {
+.galleryWrapper::-webkit-scrollbar {
   display: none;
   scroll-behavior: smooth;
 }
-
-
 }
 
-
-@media (max-width: 500px) {
-
-}
-
-@media (max-width: 350px) {
-
-}
-
-
-
- footer {
-   margin-top: 20rem;
-   height: 50px;
-   background-color: var(--mainTextColor);
+footer {
+  height: 50px;
+  margin-top: 20rem;
+  background-color: var(--mainTextColor);
  }
 
-
- /* Responsive footer */
+/* Responsive footer */
 
  @media (max-width: 750px) {
-  footer {
-    margin-top: 16rem;
-  }
- }
+footer {
+  margin-top: 16rem;
+}
+}
 
- @media (max-width: 650px) {
-  footer {
-    margin-top: 12rem;
-  }
- }
+@media (max-width: 650px) {
+footer {
+  margin-top: 12rem;
+}
+}
 
- @media (max-width: 330px) {
-  footer {
-    margin-top: 10rem;
-  }
- }
+@media (max-width: 330px) {
+footer {
+  margin-top: 10rem;
+}
+}
 
+/* WEBSITE PRELOADER */
 
-
- /* WEBSITE PRELOADER */
-
- .loader {
+.loader {
   position: fixed;
-  z-index: 49;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100svh;
+  height: 130svh;
+  z-index: 49;
   background-color: var(--mainBackgroundColor);
+}
 
-  /* transition: .9s; */
- }
-
- .loader.fadeOut {
+.loader.fadeOut {
   top: -100svh;
- }
+}
 
- .loadAnimation img {
-   position: fixed;
-   z-index: 50;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   padding: 5px 0;
-   width: 100px;
-   height: 100px;
-   /* transition: .6s; */
- }
+.loadAnimation img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  padding: 5px 0;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+}
 
- .loadAnimation img.fadeOut {
-   top: 0;
-   transform: translate(-50%, 0);
- }
+.loadAnimation img.fadeOut {
+  top: 0;
+  transform: translate(-50%, 0);
+}
 
- .vanishBlock {
-   position: fixed;
-   z-index: 51;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   width: 100px;
-   height: 100px;
-   background-color: var(--mainBackgroundColor);
-   animation: vanishMove 2s infinite ease-in-out alternate-reverse;
-   
- }
+.vanishBlock {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  z-index: 51;
+  background-color: var(--mainBackgroundColor);
+  animation: vanishMove 2s infinite ease-in-out alternate-reverse;   
+}
 
-
-
- @keyframes vanishMove {
+@keyframes vanishMove {
   0%{
      transform: translate(-50%,-150%);
   }
@@ -1210,37 +1160,37 @@ section.realizations {
 /* PRELOAD RESPONSIVE */
 
 @media (max-width: 1200px) {
-  .loadAnimation img {
-    width: 90px;
-    height: 90px;
-  }
+.loadAnimation img {
+  width: 90px;
+  height: 90px;
+}
 }
 
 
 @media (max-width: 750px) {
-  .loadAnimation img {
-    width: 80px;
-    height: 80px;
-  }
+.loadAnimation img {
+   width: 80px;
+  height: 80px;
+}
 }
 
- @media (max-width: 650px) {
-  .loadAnimation img {
-    width: 100px;
-    height: 100px;
-  }
+@media (max-width: 650px) {
+.loadAnimation img {
+  width: 100px;
+  height: 100px;
+}
 }
 
- @media (max-width: 400px) {
-  .loadAnimation img {
-    width: 85px;
-    height: 85px;
-  }
+@media (max-width: 400px) {
+.loadAnimation img {
+  width: 85px;
+  height: 85px;
+}
 }
 
- @media (max-width: 330px) {
-  .loadAnimation img {
-    width: 80px;
-    height: 80px;
-  }
+@media (max-width: 330px) {
+.loadAnimation img {
+  width: 80px;
+  height: 80px;
+}
 }
