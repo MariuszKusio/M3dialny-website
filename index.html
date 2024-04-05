@@ -7,22 +7,22 @@
     <!-- Sharing -->
     <meta
       name="og:description"
-      content="Tworzę materiały promocyjne."
+      content="Witaj, zapraszam do sprawdzenia moich realizacji oraz kontaktu."
     />
     <meta
       property="og:title"
-      content="M3dialny - twój kontent creator"
+      content="DJ Lucano - imprezy, wesela, studniówki"
     />
     <meta property="og:type" content="article" />
 
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
+    <meta property="og:url" content="https://djlucano.pl/" />
+    <meta property="og:image" content="https://djlucano.pl/img/preview.png" />
     <meta name="author" content="MKDev" />
 
     <!-- link for shortcut icon browser tab and link to css style file -->
-    <link rel="shortcut icon" type="x-icon" href="" />
+    <link rel="shortcut icon" type="x-icon" href="img/lucanoicon.svg" />
+    <link rel="stylesheet" href="lucanostyle.css" />
     <link rel="stylesheet" href="dimbox.min.css" />
-    <link rel="stylesheet" href="style.css">
 
     <!-- Font awesome -->
     <link
@@ -31,238 +31,508 @@
     />
 
     <!-- Font import -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Open+Sans&family=Oswald:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <title>DJ-Lucano</title>
 
-  
-
-    
-
-    
-
-    <title>M3dialny</title>
-
-   
+    <!-- Email messages script -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
   </head>
-  <body class="disabledScroll">
+  <body>
 
-    <div class="loader">
-      <div class="loadAnimation">
-         <img src="img/m3dialnyLogoBasic.svg" alt="">
-         <div class="vanishBlock"></div>
-      </div>
-    </div>
 
-    <header>
-      <div class="logoContainer">
-        <img src="img/m3dialnyLogoBasic.svg" alt="medialny website logo">
-      </div>
 
-      <div class="headerFlexContainer">
-         <div class="headerDescriptionTextMobile">
-          <h2 class="headerDescriptionText">Jestem concent creatorem, tworzę matierłay promocyjne, reklamowe 
-            oraz pomagam w odświeżeniu socialmediów.
-          </h2>
-          <button class="projectsShowButton" id="projectsShowButtonMobile">Zobacz realizacje</button>
-         </div>
-         <div class="firstVideoContainer">
-           <video loop autoplay muted playsinline preload="metadata" class="firstVideo">
-             <source src="img/firstMainVideo.webm" type="video/webm" />
-           </video>
-         </div>
-         <div class="titleContainer">
-           <h1 class="headerTitle">Witaj! <br> Jestem Medialny </h1>
-           <h2 class="headerDescriptionText">Jestem concent creatorem, tworzę matierłay promocyjne, reklamowe 
-            oraz pomagam w odświeżeniu socialmediów.
-           </h2>
-           <button class="projectsShowButton" id="projectsShowButton">Zobacz realizacje</button>
-         </div>
-         <div class="secontVideoContainer">
-          <video loop autoplay muted playsinline preload="metadata" class="secondVideo">
-            <source src="img/secondMainVideo.webm" type="video/webm" />
-          </video>
-         </div>
-    </header>
 
-    <section class="description">
-       <div class="descriptionFlexContainer">
-          <div class="phoneImage">
-            <img src="img/phoneImage.png" alt="phone with photo made by medialny">
+    <section class="startScreen">
+      <!-- <video autoplay muted loop id="myVideo">
+        <source src="img/video (1080p).mp4" type="video/mp4" />
+      </video> -->
+
+      <nav class="menuBar">
+        <div class="logo">
+          <img src="img/lucanoLogo1.svg" alt="dj lucano logo" />
+        </div>
+
+        <ul class="menuItems">
+          <li id="menuGalleryBtn">
+            galeria
+            <div class="menuLine"></div>
+          </li>
+          <li id="menuAboutBtn">
+            o mnie
+            <div class="menuLine"></div>
+          </li>
+          <li id="menuContactBtn">
+            kontakt
+            <div class="menuLine"></div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="mobileAttributeWrapper">
+        <div class="attributeBorder">
+          <div class="djAttributes">
+            <div class="attributesWrapper">
+              <div class="atrOne">
+                <img src="img/wesela2.svg" alt="weddings icon" />
+                <p><br />wesela</p>
+              </div>
+              <div class="atrTwo">
+                <img src="img/urodziny2.svg" alt="birthday party icon" />
+                <p><br />urodziny</p>
+              </div>
+              <div class="atrThree">
+                <img src="img/wydarzenia2.svg" alt="event icon" />
+                <p><br />wydarzenia</p>
+              </div>
+              <div class="atrFour">
+                <img src="img/imprezy2.svg" alt="party icon" />
+                <p>imprezy<br />okolicznościowe</p>
+              </div>
+            </div>
           </div>
-          <div class="textDescription">
-            <p>Chcesz, żeby materiały w twoich ogłoszeniach wyglądały profesjonalnie?
-              Pozwól, że ci pomogę. </p>
-          </div>
-       </div>
-
-       <div class="localizationText">
-         <p> Działam głównie na terenie <strong>Lublin</strong>a, ale jestem również otwarty na współpracę w innych zakątkach Polski.</p>
-       </div>
-    </section>
-
-    <section class="clientOpinions">
-      <h1>Opinie moich klientów</h1>
-      <div class="opinionsContainer">
-         <div class="slider">
-            <div class="slide"><p>"M3dialny jest mistrzem ukazywania piękna poprzez obiektyw aparatu!" <br><br></bre>~Marta</p></div>
-            <div class="slide"><p>"Każde zdjęcie zrobione jest z wyrazem jego niezwykłego talentu i pasji." <br><br></bre>~Dawid</p></div>
-            <div class="slide"><p>"Potrafi uchwycić chwile, których inni nie dostrzegają - to prawdziwy dar!" <br><br></bre>~Łukasz</p></div>
-            <div class="slide"><p>"Dzięki Medialnemu każda sesja fotograficzna staje się niezapomnianą przygodą." <br><br></bre>~Jakub</p></div>
-            <div class="slide"><p>"Emanuje pozytywną energią, która odzwierciedla się w jego fotografii." <br><br></bre>~Mariusz</p></div>
-            <div class="slide"><p>"Niezależnie od tematu, Medialny potrafi stworzyć arcydzieło fotograficzne." <br><br></bre>~CarDetailing</p></div>
-            <div class="slide"><p>"Praca z Medialnym to przywilej - jego profesjonalizm i zaangażowanie są niesamowite!" <br><br></bre>~Barber Golibroda</p></div>
-            <div class="slide"><p>"Potrafi uchwycić esencję każdej sytuacji i przekształcić ją w magiczne zdjęcie." <br><br></bre>~Marek</p></div>
-            <div class="slide"><p>"Medialny to nie tylko fotograf, ale również artysta, który maluje światłem." <br><br></bre>~Mateusz</p></div>
-
-            <div class="slide"><p>"M3dialny jest mistrzem ukazywania piękna poprzez obiektyw aparatu!" <br><br></bre>~Marta</p></div>
-            <div class="slide"><p>"Każde zdjęcie zrobione jest z wyrazem jego niezwykłego talentu i pasji." <br><br></bre>~Dawid</p></div>
-            <div class="slide"><p>"Potrafi uchwycić chwile, których inni nie dostrzegają - to prawdziwy dar!" <br><br></bre>~Łukasz</p></div>
-            <div class="slide"><p>"Dzięki Medialnemu każda sesja fotograficzna staje się niezapomnianą przygodą." <br><br></bre>~Jakub</p></div>
-            <div class="slide"><p>"Emanuje pozytywną energią, która odzwierciedla się w jego fotografii." <br><br></bre>~Mariusz</p></div>
-            <div class="slide"><p>"Niezależnie od tematu, Medialny potrafi stworzyć arcydzieło fotograficzne." <br><br></bre>~CarDetailing</p></div>
-            <div class="slide"><p>"Praca z Medialnym to przywilej - jego profesjonalizm i zaangażowanie są niesamowite!" <br><br></bre>~Barber Golibroda</p></div>
-            <div class="slide"><p>"Potrafi uchwycić esencję każdej sytuacji i przekształcić ją w magiczne zdjęcie." <br><br></bre>~Marek</p></div>
-            <div class="slide"><p>"Medialny to nie tylko fotograf, ale również artysta, który maluje światłem." <br><br></bre>~Mateusz</p></div>
-         </div>
-      </div>
-    </section>
-
-    <section class="realizations" id="realizations">
-      <h1>Realizacje</h1>
-
-
-      <div class="realizationsPositionContainer">
-       <div class="realizationsContainer">
-
-        <div class="realizationCard">
-          <div class="cardBlur"></div>
-          <h2 class="cardTitle">Nieruchomości</h2>
-          <button class="realizationShowButton" id="nieruchomosc">Zobacz więcej</button>
-          <img src="img/nieruchomosci.png" alt="">
-        </div>
-
-        <div class="realizationCard">
-          <div class="cardBlur"></div>
-          <h2 class="cardTitle">Autodetailling</h2>
-          <button class="realizationShowButton" id="autodetailling">Zobacz więcej</button>
-          <img src="img/autodetailling.png" alt="">
-        </div>
-
-        <div class="realizationCard">
-          <div class="cardBlur"></div>
-          <h2 class="cardTitle">Beauty</h2>
-          <button class="realizationShowButton" id="beauty">Zobacz więcej</button>
-          <img src="img/beauty.png" alt="">
-        </div>
-
-        <div class="realizationCard">
-          <div class="cardBlur"></div>
-          <h2 class="cardTitle">Gastro</h2>
-          <button class="realizationShowButton" id="gastro">Zobacz więcej</button>
-          <img src="img/gastro.png" alt="">
-        </div>
-
-        <div class="realizationCard">
-          <div class="cardBlur"></div>
-          <h2 class="cardTitle">Barber</h2>
-          <button class="realizationShowButton" id="barber">Zobacz więcej</button>
-          <img src="img/barber.png" alt="">
-        </div>
-
-       </div>
-      </div>
-
-
-      <div class="realizationsGallery">
-        <div class="closeButton"></div>
-        <h2 class="galleryTitle">Galeria</h2>
-        <div class="galleryWrapper">
-          <a href="img/firstMainVideo.webm" data-dimbox="medialny-Gallery" data-dimbox-caption="Realizacja dla Barbera" class="videoItem">
-            <video src="img/firstMainVideo.webm" preload="metadata"></video>
-            <i class="fa-solid fa-play"></i>
-          </a>
-
-          <a href="img/secondMainVideo.webm" data-dimbox="medialny-Gallery" data-dimbox-caption="Realizacja dla Bddd" class="videoItem">
-            <video src="img/secondMainVideo.webm" preload="metadata"></video>
-            <i class="fa-solid fa-play"></i>
-          </a>
-
-          <a href="img/firstMainVideo.webm" data-dimbox="medialny-Gallery" class="videoItem">
-            <video src="img/firstMainVideo.webm" preload="metadata"></video>
-            <i class="fa-solid fa-play"></i>
-          </a>
-
-          <a href="img/secondMainVideo.webm" data-dimbox="medialny-Gallery" class="videoItem">
-            <video src="img/secondMainVideo.webm" preload="metadata"></video>
-            <i class="fa-solid fa-play"></i>
-          </a>
-
-          <a href="img/firstMainVideo.webm" data-dimbox="medialny-Gallery" class="videoItem">
-            <video src="img/videotest.mp4" preload="metadata"></video>
-            <i class="fa-solid fa-play"></i>
-          </a>
-
-          <a href="img/secondMainVideo.webm" data-dimbox="medialny-Gallery" class="videoItem">
-            <video src="img/secondMainVideo.webm" preload="metadata"></video>
-            <i class="fa-solid fa-play"></i>
-          </a>
-
-          <a href="img/firstMainVideo.webm" data-dimbox="medialny-Gallery" class="videoItem">
-            <video src="img/firstMainVideo.webm" preload="metadata"></video>
-            <i class="fa-solid fa-play"></i>
-          </a>
-
-          <a href="img/secondMainVideo.webm" data-dimbox="medialny-Gallery" class="videoItem">
-            <video src="img/secondMainVideo.webm" preload="metadata"></video>
-            <i class="fa-solid fa-play"></i>
-          </a>
-
-          <a href="img/firstMainVideo.webm" data-dimbox="medialny-Gallery" class="videoItem">
-            <video src="img/firstMainVideo.webm" preload="metadata"></video>
-            <i class="fa-solid fa-play"></i>
-          </a>
-
-          <a href="img/secondMainVideo.webm" data-dimbox="medialny-Gallery" class="videoItem">
-            <video src="img/secondMainVideo.webm" preload="metadata"></video>
-            <i class="fa-solid fa-play"></i>
-          </a>
-
-          <a href="img/firstMainVideo.webm" data-dimbox="medialny-Gallery" class="videoItem">
-            <video src="img/firstMainVideo.webm" preload="metadata"></video>
-            <i class="fa-solid fa-play"></i>
-          </a>
-       
-        </div>
-      </div>
-
-    </section>
-
-    <section class="contact">
-      <h1>Kontakt</h1>
-      <div class="contactFlexContainer">
-        <div class="email">
-          <div class="circleContainer">
-            <i class="fa-regular fa-envelope"></i>
-          </div>
-          <a href="">m3dialny@gmail.com</a>
-        </div>
-        <div class="instagram">
-          <div class="circleContainer">
-            <i class="fa-brands fa-instagram"></i>
-          </div>
-          <a href="https://www.instagram.com/m3dialny/">instagram.com/m3dialny/</a>
-        </div>
-        <div class="phone">
-          <div class="circleContainer">
-            <i class="fa-solid fa-phone"></i>
-          </div>
-          <a href="tel:+48733626878">+48 733 626 878</a>
         </div>
       </div>
     </section>
 
-    <footer>
-      
+    <section id="aboutSection" class="about">
+      <img
+        src="img/djImage2.webp"
+        alt="photo of dj lucano for mobile devices"
+        class="djImageMobile"
+      />
+      <div class="descriptionWrapper">
+        <div class="descriptionBorder">
+          <div class="descriptionInside">
+            <div class="djImage">
+              <img src="img/djImage2.webp" alt="photo of dj lucano for desktop" />
+            </div>
+
+            <div class="djDescription">
+              <p>
+                Cześć! Jestem Dj Lucano, twój towarzysz muzyczny na
+                niezapomnianych imprezach! Mam za sobą długie lata doświadczenia
+                w świecie muzyki, a moja pasja do tworzenia niesamowitej
+                atmosfery sprawia, że uwielbiam prowadzić różnego rodzaju
+                imprezy okolicznościowe. Jeśli planujesz urodziny, imprezę
+                firmową, przyjęcie, wesele czy studniówkę, to jestem gotów, by
+                uczynić to wydarzenie wyjątkowym.
+                <br />
+                <br />
+                Zawsze stawiam na profesjonalizm i dopasowuję się do gustów i
+                preferencji moich klientów. Dzięki mojej szerokiej wiedzy
+                muzycznej mam w swojej kolekcji prawdziwe perełki - od klubowych
+                hitów po romantyczne ballady i najnowsze przeboje. Gwarantuję,
+                że zawsze znajdę coś specjalnego, co sprawi, że goście będą
+                bawić się do rana.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallerySection" class="gallery">
+      <h1>galeria</h1>
+      <div class="filterWrapper">
+        <div class="filterPick">
+          <ul id="pickButtons">
+            <li>
+              <img src="img/filterIcon.svg" alt="gallery filter icon" />
+            </li>
+            <li
+              id="showAll"
+              class="selectButton filterSelected"
+              data-btnType="all"
+            >
+              Wszystko
+            </li>
+            <li id="showPhotos" class="selectButton" data-btnType="photoItem">
+              Zdjęcia
+            </li>
+            <li id="showVideos" class="selectButton" data-btnType="videoItem">
+              Filmy
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="galleryWraper">
+        <div id="gallery" class="mainGallery">
+
+          
+          <a href="img/GALLERY/VIDEOS/video1.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+            <img src="img/GALLERY/VIDEOS/WEBP/1.webp" alt="" /> 
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video2.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+            <img src="img/GALLERY/VIDEOS/WEBP/2.webp" alt="" /> 
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video3.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+            <img src="img/GALLERY/VIDEOS/WEBP/3.webp" alt="" /> 
+            <i class="fa-solid fa-play"></i>
+          </a>
+          
+          <a href="img/GALLERY/VIDEOS/video4.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+           <img src="img/GALLERY/VIDEOS/WEBP/4.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video5.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+           <img src="img/GALLERY/VIDEOS/WEBP/5.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video6.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+           <img src="img/GALLERY/VIDEOS/WEBP/6.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video7.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+           <img src="img/GALLERY/VIDEOS/WEBP/7.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video8.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+           <img src="img/GALLERY/VIDEOS/WEBP/8.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video9.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+           <img src="img/GALLERY/VIDEOS/WEBP/9.webp" alt="" /> 
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video10.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/10.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video11.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/11.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video12.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/12.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video13.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/13.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video14.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/14.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video15.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/15.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video16.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/16.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video17.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/17.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video18.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/18.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video19.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/19.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video20.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/20.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video21.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/21.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video22.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/22.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video23.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/23.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video24.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/24.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video25.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/25.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video26.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/26.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video27.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/27.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video28.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/28.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video29.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/29.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video30.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/30.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video31.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/31.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video32.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/32.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video33.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/33.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video34.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/34.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video35.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/35.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video36.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/36.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video37.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/37.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video38.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/38.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video39.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/39.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video40.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/40.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video41.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/41.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video42.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/42.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video43.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/43.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video44.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/44.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video45.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/45.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video46.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/46.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video47.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/47.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video48.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/48.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video49.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/49.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+          
+          <a href="img/GALLERY/VIDEOS/video50.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/50.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video51.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/51.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video52.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/52.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video53.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/53.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video54.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/54.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video55.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+             <img src="img/GALLERY/VIDEOS/WEBP/55.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/GALLERY/VIDEOS/video56.mp4" data-dimbox="lucano-Gallery" class="videoItem">
+           <img src="img/GALLERY/VIDEOS/WEBP/56.webp" alt="" />  
+            <i class="fa-solid fa-play"></i>
+          </a>
+    
+          <a href="img/GALLERY/PHOTOS/photo1.jpg" data-dimbox="lucano-Gallery" data-dimbox-caption="Party Photo" class="photoItem">
+            <img src="img/GALLERY/PHOTOS/PHOTOSWEBP/photo1.webp" alt="" class="photoItem" />
+          </a>
+
+          <a href="img/GALLERY/PHOTOS/photo3.jpg" data-dimbox="lucano-Gallery" data-dimbox-caption="Party Photo" class="photoItem">
+            <img src="img/GALLERY/PHOTOS/PHOTOSWEBP/photo3.webp" alt="" class="photoItem" />
+          </a>
+
+          <a href="img/GALLERY/PHOTOS/photo4.jpg" data-dimbox="lucano-Gallery" data-dimbox-caption="Party Photo" class="photoItem">
+            <img src="img/GALLERY/PHOTOS/PHOTOSWEBP/photo4.webp" alt="" class="photoItem" />
+          </a>
+
+          <a href="img/GALLERY/PHOTOS/photo5.jpg" data-dimbox="lucano-Gallery" data-dimbox-caption="Party Photo" class="photoItem">
+            <img src="img/GALLERY/PHOTOS/PHOTOSWEBP/photo5.webp" alt="" class="photoItem" />
+          </a>
+
+          <a href="img/GALLERY/PHOTOS/photo6.jpg" data-dimbox="lucano-Gallery" data-dimbox-caption="Party Photo" class="photoItem">
+            <img src="img/GALLERY/PHOTOS/PHOTOSWEBP/photo6.webp" alt="" class="photoItem" />
+          </a>
+
+          <a href="img/GALLERY/PHOTOS/photo9.jpg" data-dimbox="lucano-Gallery" data-dimbox-caption="Party Photo" class="photoItem">
+            <img src="img/GALLERY/PHOTOS/PHOTOSWEBP/photo9.webp" alt="" class="photoItem" />
+          </a>
+
+          <a href="img/GALLERY/PHOTOS/photo10.jpg" data-dimbox="lucano-Gallery" data-dimbox-caption="Party Photo" class="photoItem">
+            <img src="img/GALLERY/PHOTOS/PHOTOSWEBP/photo10.webp" alt="" class="photoItem" />
+          </a>
+
+          <a href="img/GALLERY/PHOTOS/photo11.jpg" data-dimbox="lucano-Gallery" data-dimbox-caption="Party Photo" class="photoItem">
+            <img src="img/GALLERY/PHOTOS/PHOTOSWEBP/photo11.webp" alt="" class="photoItem" />
+          </a>
+        
+        </div>
+      </div>
+    </section>
+
+    <section id="contactSection" class="contact">
+      <h1>kontakt</h1>
+      <p class="phoneNumber"><i class="fa-solid fa-phone"></i>505 956 900</p>
+      <p class="email">
+        <i class="fa-solid fa-envelope"></i>djlucano83@gmail.com
+      </p>
+      <p class="facebook">
+        <i class="fa-brands fa-square-facebook"></i>faceboook.com/djlucano
+      </p>
+
+      <h2>Lub napisz tutaj</h2>
+      <input
+        type="text"
+        placeholder="Podaj imię"
+        class="userNameInput smallInput"
+      />
+      <input
+        type="text"
+        placeholder="Podaj email"
+        class="userEmailInput smallInput"
+      />
+      <input
+        type="text"
+        placeholder="Podaj temat"
+        class="subjectInput smallInput"
+      />
+      <textarea
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="Napisz wiadomość..."
+        class="textMessage"
+      ></textarea>
+      <button class="sendMessage">Wyślij</button>
+      <p class="formValidationLabel"></p>
+    </section>
+
+    <footer class="mkFooter">
+      <a>
+        <p><span>&copy;</span>&nbsp;Realizacja&nbsp;</p>
+        <p>MKDev</p>
+      </a>
     </footer>
 
     <script src="dimbox.min.js"></script>
