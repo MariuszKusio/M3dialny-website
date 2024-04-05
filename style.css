@@ -27,6 +27,7 @@ body {
 /* Hidden overflow for scroll disable when load page is displayed */
 body.disabledScroll {
   overflow: hidden;
+  width: 100%;
 }
 
 button {
