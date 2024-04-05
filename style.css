@@ -1105,13 +1105,13 @@ footer {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 130svh;
+  height: 160vh;
   z-index: 49;
   background-color: var(--mainBackgroundColor);
 }
 
 .loader.fadeOut {
-  top: -100svh;
+  top: -160vh;
 }
 
 .loadAnimation img {
