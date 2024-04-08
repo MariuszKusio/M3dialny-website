@@ -1191,7 +1191,7 @@ footer {
 
 .mkFooter p:nth-child(1) {
    display: inline-block;
-   /* margin-left: 20px; */
+   margin-left: 20px;
 }
 
 .mkFooter p:nth-child(2) {
