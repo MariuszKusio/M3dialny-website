@@ -934,7 +934,7 @@ section.contact {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100svh;
+  height: 100lvh;
   width: 100%; 
   background-image: url(img/blurLayer.png);
   backdrop-filter: blur(8px);
@@ -1173,34 +1173,29 @@ footer {
   background-color: var(--mainTextColor);
 }
 
-.mkFooter a {
-  /* display: block; */
-  line-height: 50px;
-  height: 50px;
-  margin-left: 20px;
-  margin: 0px 0px 0px 20px;
-}
-
 .footerFlexContainer {
   display: flex;
-  gap: 10px;
   height: 50px;
   align-items: center;
-  background-color: var(--mainTextColor);
+  background-color: rgb(236,236,236);
 }
  
 .mkFooter p {
   display: inline-block;
-  /* line-height: 45px; */
   font-family: roboto;
   font-weight: 300;
   text-decoration: none;
   font-size: 2rem;
-  color: white;
+  color: var(--mainTextColor);
 }
- 
+
+.mkFooter p:nth-child(1) {
+   display: inline-block;
+   margin-left: 20px;
+}
+
 .mkFooter p:nth-child(2) {
-  background: -webkit-linear-gradient(#ad7f23, #ca9c38);
+  background: -webkit-linear-gradient(#504e4e, #2e2d2d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
