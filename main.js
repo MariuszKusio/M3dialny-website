@@ -1,11 +1,11 @@
-// Realizations section nav button
-
+// Header nav button
+// nav button elements
 const realizationNavButton = document.getElementById('projectsShowButton');
 const realizationNavButtonMobile = document.getElementById('projectsShowButtonMobile');
 
+// scroll to realizations section after click
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
-
     if (section) {
         section.scrollIntoView({ behavior:'smooth' })
     }
@@ -18,6 +18,7 @@ realizationNavButtonMobile.addEventListener('click', function() { scrollToSectio
 
 
 // Realizations slider 
+// Slider elements
 const sliderContainer = document.querySelector('.realizationsPositionContainer');
 const slider = document.querySelector('.realizationsContainer');
 const slide = document.querySelectorAll('.realizationCard');
@@ -38,9 +39,7 @@ sliderContainer.addEventListener('mousedown', (e) => {
 });
 
 sliderContainer.addEventListener('mouseenter', () => {
- 
     sliderContainer.style.cursor = 'url("img/cursor1.svg"), auto';
-  
   });
 
   sliderContainer.addEventListener('mouseup', () => {
@@ -50,10 +49,8 @@ sliderContainer.addEventListener('mouseenter', () => {
   window.addEventListener('mouseup', () => {
     pressed = false;
   });
-
-  // Zrób tak żeby przycisk zobacz więcej na realizacjach po kliknięciu nie przesuwał slidera bo robi błędy
+  
   realizationButton.forEach(item => item.addEventListener('click', () => {
-    console.log('klikam przycisk');
     pressed = false ;
   }));
 
@@ -67,22 +64,19 @@ sliderContainer.addEventListener('mouseenter', () => {
     checkBoundary()
   });
 
-
   function checkBoundary() {
-
     // safety about get under 40px left slider container value and more left px than slider width
     if(parseInt(slider.style.left) > 40) {
         slider.style.left = '40px'
     } else if(parseInt(slider.style.left) < (sliderContainer.offsetWidth - totalCardsSliderWidth )) {
         slider.style.left = `${sliderContainer.offsetWidth - totalCardsSliderWidth}px`;
     }
-
   }
-
 
 
   // Gallery 
 
+  // Gallery elements
   const realizationGallery = document.querySelector(".realizationsGallery");
   const closeButton = document.querySelector(".closeButton");
   
@@ -93,37 +87,29 @@ sliderContainer.addEventListener('mouseenter', () => {
   });
 
   // Show gallery
-
   realizationButton.forEach( button => {
     button.addEventListener('click', (e) => {
       realizationGallery.style.display = 'block';
       document.body.classList.add('disabledScroll');
-      // console.log(e.target.id);
     })
   });
 
-// header animation
 
+// Header animation
+
+// Animation elements
 const firstVideo = document.querySelector(".firstVideoContainer");
 const secondVideo = document.querySelector(".secontVideoContainer");
 const firstVideoLoad = document.querySelector(".firstVideo");
 const secondVideoLoad = document.querySelector(".secondVideo");
 const headerTitle = document.querySelector(".headerTitle");
 
-firstVideoLoad.addEventListener('load', function() {
-
-  setTimeout(() => {
-    firstVideo.classList.add('firstMove');
-    secondVideo.classList.add('secondMove');
-  }, 1000)
-  
-})
-
+// scroll counter for relase animation after scroll
 let scrollCounter = 0;
 
 window.addEventListener('scroll', function() {
   scrollCounter++;
-  // safety about auto entry scroll
+  // Safety about auto animation relase 
   if(scrollCounter > 1){
   //Desktop animation
   firstVideo.classList.add('firstMove');
@@ -139,9 +125,11 @@ firstVideoLoad.playbackRate = 0.8;
 secondVideoLoad.playbackRate = 0.8;
 
 
+// loading page elements
 const loader = document.querySelector('.loader');
 const loaderLogo = document.querySelector('.loadAnimation img');
 const vanishBlock = document.querySelector('.vanishBlock');
+
 
 // loading page listener with vanish function
 window.addEventListener('load', () => {
@@ -151,13 +139,36 @@ window.addEventListener('load', () => {
   loader.classList.add('fadeOut');
   window.scrollY === 0 ? loaderLogo.classList.add('fadeOut') : loaderLogo.style.top = '-200px';
 
-  
 
   setTimeout( () => {
     loader.style.display = "none";
     document.body.classList.remove('disabledScroll');
   }, 1000);
 
+});
+
+
+// Clickable links
+
+// mail - copy email link to clipboard after click
+const copyEmail = document.querySelector('.copyEmail');
+
+const copyToClipboard = () => {
+  navigator.clipboard.writeText(copyEmail.innerHTML);
+  alert('Skopiowano email do schowka.');
+};
+
+document.getElementById('emailLinkCircle').addEventListener('click', copyToClipboard);
+copyEmail.addEventListener('click', copyToClipboard);
+
+// instagram
+document.getElementById('instagramLinkCircle').addEventListener('click', () => {
+  window.location.href = 'https://www.instagram.com/m3dialny/';
+});
+
+// phone
+document.getElementById('phoneLinkCircle').addEventListener('click', () => {
+  window.location.href = 'tel:+48733626878';
 });
 
 
