@@ -183,11 +183,21 @@ button {
 
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
+
+  /* .firstVideoContainer .firstVideo {
+    width: 125%;
+  }
+  
+  .secontVideoContainer .secondVideo {
+    width: 125%;
+  }
+   */
 
 .headerTitle {
+  width: 100%;
   margin-top: 5rem;
-  font-size: 3.2rem;
+  font-size: 2.3rem;
 }
 
 .headerDescriptionText {
@@ -209,7 +219,7 @@ button {
 }
 
 .headerTitle {
-  font-size: 2.7rem;
+  font-size: 2.2rem;
 }
 
 .headerDescriptionText {
@@ -239,11 +249,6 @@ button {
   transform: translateX(-50%);
 }
 
-.secontVideoContainer.secondMove {
-  right: 50%;
-  transform: translateX(50%);
-}
-
 .logoContainer img {
   height: 100px;
   width: 100px;
@@ -252,13 +257,9 @@ button {
 .firstVideoContainer .firstVideo {
   height: calc(100svh - 90px);
 }
-  
-.secontVideoContainer .secondVideo {
-  height: calc(100svh - 90px);
-}
 
 .headerTitle {
-  margin: 1rem 0 -10rem 0;
+  margin: 1rem 0 -15rem 0;
   font-size: 4rem;
   transition: .7s;
 }
@@ -399,7 +400,7 @@ section.description {
   width: 100%;
   max-width: 1920px;
   margin-top: 6rem;
-  background-image: url(img/map.png);
+  background-image: url(img/webp/map.webp);
   background-position: 0% 0%;
   animation: moveMap 120s infinite;
 }
